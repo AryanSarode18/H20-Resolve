@@ -341,15 +341,13 @@ header .fa-bars {
     right: 10px;
 }
 
-
-
 .project {
-    background: #333;
+    background: #F4F4F2;
     min-height: 100vh;
 }
 
 .project .heading {
-    color: #fff;
+    color: #555;
 }
 
 .project .box-container {
@@ -408,82 +406,6 @@ header .fa-bars {
     transform: translateY(0rem);
 }
 
-.donate {
-    position: relative;
-    z-index: 0;
-    min-height: 100vh;
-    padding-bottom: 3rem;
-}
-
-.donate .heading {
-    color: #fff;
-}
-
-.donate .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.donate .form-container form {
-    width: 80%;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.4rem);
-    box-shadow: 0 0.3rem 0.5rem #000;
-    text-align: center;
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
-    border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
-}
-
-.donate .form-container form .inputBox {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.donate .form-container form .inputBox input,
-select {
-    height: 4rem;
-    width: 49%;
-    background: #fff;
-    color: #333;
-    padding: 0 1rem;
-    margin: 1rem 0;
-    font-size: 1.7rem;
-    outline: none;
-    border: none;
-}
-
-.donate .form-container form textarea {
-    height: 20rem;
-    width: 100%;
-    background: #fff;
-    color: #333;
-    padding: 1rem;
-    margin: 1rem 0;
-    font-size: 1.7rem;
-    outline: none;
-    border: none;
-    resize: none;
-}
-
-.donate .form-container form input[type="submit"] {
-    color: #fff;
-    border-color: #fff;
-}
-
-.donate .form-container form input[type="submit"]:hover {
-    color: var(--green);
-    border-color: var(--green);
-    background: #fff;
-}
-
 .footer {
     background: #333;
 }
@@ -502,66 +424,10 @@ select {
     flex: 1 1 25rem;
 }
 
-.footer .box-container .box .logo {
-    font-size: 3rem;
-    color: var(--green);
-}
-
 .footer .box-container .box p {
     font-size: 1.7rem;
     color: #ccc;
     padding: 1rem 0;
-}
-
-.footer .box-container .box .share {
-    text-align: center;
-    font-size: 3rem;
-    color: #fff;
-}
-
-.footer .box-container .box:nth-child(2) a {
-    text-align: center;
-    font-size: 1.7rem;
-    color: #eee;
-    display: block;
-    padding: 0.5rem 0;
-}
-
-.footer .box-container .box:nth-child(2) a:hover {
-    text-decoration: underline;
-}
-
-.footer .box-container .box .letter {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.footer .box-container .box form input[type="email"] {
-    padding: 0 1rem;
-    outline: none;
-    border: 0.2rem solid var(--green);
-    background: none;
-    font-size: 1.7rem;
-    color: #fff;
-    height: 4rem;
-    width: 74%;
-}
-
-.footer .box-container .box form button {
-    outline: none;
-    border: none;
-    background: var(--green);
-    font-size: 1.9rem;
-    color: #fff;
-    height: 4rem;
-    width: 25%;
-    cursor: pointer;
-}
-
-.footer .box-container .box form button:hover {
-    color: var(--green);
-    background: none;
-    border: 0.1rem solid var(--green);
 }
 
 .footer .credit {
@@ -637,14 +503,3 @@ select {
     }
 }
 
-@media (max-width: 500px) {
-
-    .donate .form-container form .inputBox input,
-    select {
-        width: 100%;
-    }
-
-    .donate .form-container form {
-        width: 90%;
-    }
-}
