@@ -214,9 +214,12 @@ header .fa-bars {
 
 .wastage .box-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+
+.wastage .box-container .problem {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
 }
 
 .wastage .box-container .box {
@@ -244,61 +247,16 @@ header .fa-bars {
 }
 
 .wastage .box-container .solution {
-    height: 280px;
+    min-height: 280px;
 
 }
-
-/*.water-pollution .box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 86%;
-    margin: 0 auto;
-}
-
-.water-pollution .box-container .box {
-    flex: 1 1 25rem;
-    padding: 2rem 1rem;
-    text-align: center;
-    background: #fff;
-    border: 0.2rem solid var(--green);
-    margin: 2rem;
-    cursor: pointer;
-}
-
-.water-pollution .box-container .box i {
-    color: var(--green);
-    font-size: 4rem;
-    padding: 1rem 0;
-}
-
-.water-pollution .box-container .box h3 {
-    color: #333;
-    font-size: 2rem;
-}
-
-.water-pollution .box-container .box p {
-    color: #666;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-}
-
-.water-pollution .box-container .box a {
-    color: #333;
-    font-size: 1.7rem;
-}
-
-.water-pollution .box-container .box a:hover {
-    color: var(--green);
-} */
 
 .water-pollution {
     min-height: 100vh;
 }
 
 .water-pollution .row {
-    margin: 13px 0 60px 0;
+    padding-top: 13px;
     display: flex;
     justify-content: center;
 }
@@ -336,9 +294,10 @@ header .fa-bars {
     display: flex;
 }
 
-/* .water-pollution .row .content .slides-container .slide {
-    display: none;
-} */
+.water-pollution .row .content .slides-container .slide {
+    font-size: 2rem;
+    color: #666;
+}
 
 .water-pollution .row .content .bottom {
     text-align: center
@@ -349,36 +308,28 @@ header .fa-bars {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #d1c9c9;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .dot.active {
-    background-color: #000 !important; /* Color when the dot is active */
+    background-color: #666 !important;
 }
 
 .water-pollution .row .content .bottom .dot:hover {
-    background-color: #717171;
+    background-color: #b2b2b2;
 }
 
 .water-pollution .row .content .bottom a {
-    cursor: pointer;
     padding: 4px 10px;
-    color: #000;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
-    border: 0.2rem solid var(--green);
-    color: var(--green);
     bottom: 10px;
 }
-
-/* .water-pollution .row .content .bottom a:hover {
-    
-} */
 
 .water-pollution .row .content .bottom .prev {
     position: absolute;
