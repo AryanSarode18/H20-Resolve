@@ -426,6 +426,7 @@ header .fa-bars {
     overflow: hidden;
     position: relative;
     margin: 1rem;
+    cursor: pointer;
 }
 
 .project .box-container .box img {
