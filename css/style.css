@@ -9,7 +9,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.37, 1.14, 0.26, 1.24);
 }
@@ -201,6 +200,66 @@ header .fa-bars {
     padding: 2rem;
 }
 
+.bg-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-preview .preview {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.bg-preview .preview .fa-times {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    color: #444;
+    font-size: 3.5rem;
+}
+
+.bg-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.bg-preview .preview h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.bg-preview .preview p {
+    font-size: 18px;
+    color: #333;
+}
+
+.bg-preview .preview .info {
+    line-height: 1.6;
+}
+
+.bg-preview .preview ul {
+    margin: 0px 0px 20px 60px;
+}
+
+.bg-preview .preview ul li p  {
+    margin-bottom: 12px;
+}
+
+.bg-preview .preview ul li::marker {
+    color: #333;
+}
+
 .sub-heading {
     font-size: 3.2rem;
     color: var(--green);
@@ -252,7 +311,7 @@ header .fa-bars {
 }
 
 .water-pollution {
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .water-pollution .row {
@@ -406,6 +465,40 @@ header .fa-bars {
     transform: translateY(0rem);
 }
 
+.drought {
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.drought .heading {
+    color: #fff;
+}
+
+.drought .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.drought .inner-bg {
+    width: 86%;
+    height: 70vh;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 .3rem .5rem #000;
+    text-align: center;
+    border-top: .1rem solid rgba(255, 255, 255, .3);
+    border-left: .1rem solid rgba(255, 255, 255, .3);
+}
+
 .footer {
     background: #333;
 }
@@ -443,8 +536,6 @@ header .fa-bars {
 .footer .credit span {
     color: var(--green);
 }
-
-/* media queries  */
 
 @media (max-width: 768px) {
     html {
@@ -502,4 +593,3 @@ header .fa-bars {
         width: auto;
     }
 }
-
