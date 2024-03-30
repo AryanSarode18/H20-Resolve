@@ -1,3 +1,5 @@
+// JS Logic For Water Pollution Slider
+
 document.addEventListener("DOMContentLoaded", function () {
   changeText(); // Initialize text change
   showSlides(slideIndex); // Initialize slider
@@ -31,6 +33,8 @@ const showSlides = (n) => {
 
 
 
+// JS Logic For Navbar
+
 let menu = document.querySelector(".fa-bars");
 let navbar = document.querySelector(".navbar");
 menu.addEventListener("click", function () {
@@ -43,6 +47,8 @@ window.addEventListener("scroll", () => {
 });
 
 
+
+// JS Logic For Home Page Auto Changing Texts
 
 const texts = [
   "Save Water, Save Life",
@@ -64,32 +70,65 @@ changeText();
 
 
 
-let previewContainer = document.querySelector('.bg-preview');
-let previewBoxes = previewContainer.querySelectorAll('.preview');
-function openPreview(target) {
-    previewContainer.style.display = 'flex';
-    previewBoxes.forEach(preview => {
-        let previewTarget = preview.getAttribute('data-target');
-        if (target === previewTarget) {
-            preview.classList.add('active');
-        }
-    });
+// Function to open the preview
+function openPreview(previewContainer, target) {
+  previewContainer.style.display = 'flex';
+  let previewBoxes = previewContainer.querySelectorAll('.preview');
+  previewBoxes.forEach(preview => {
+      let previewTarget = preview.getAttribute('data-target');
+      if (target === previewTarget) {
+          preview.classList.add('active');
+      }
+  });
 }
-function closePreview() {
-    previewBoxes.forEach(preview => {
-        preview.classList.remove('active');
-    });
-    previewContainer.style.display = 'none';
+
+// Function to close the preview
+function closePreview(previewContainer) {
+  let previewBoxes = previewContainer.querySelectorAll('.preview');
+  previewBoxes.forEach(preview => {
+      preview.classList.remove('active');
+  });
+  previewContainer.style.display = 'none';
 }
-let learnMoreButtons = document.querySelectorAll('.btn');
-learnMoreButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        let target = button.closest('.about').getAttribute('data-target');
-        openPreview(target);
-    });
+
+// Get the "Explore" button in the home section
+let exploreButtonHome = document.querySelector('.home .btn');
+
+// Get the preview container for the home section
+let homePreviewContainer = document.querySelector('.home-preview');
+
+// Add click event listener to the "Explore" button in the home section
+exploreButtonHome.addEventListener('click', function() {
+  let target = document.querySelector('.home').getAttribute('data-target');
+  openPreview(homePreviewContainer, target);
 });
-previewBoxes.forEach(preview => {
-    preview.querySelector('.fa-times').addEventListener('click', function() {
-        closePreview();
-    });
+
+// Add click event listener to close button in the home section preview
+let closeButtonsHome = homePreviewContainer.querySelectorAll('.fa-times');
+closeButtonsHome.forEach(button => {
+  button.addEventListener('click', function() {
+      closePreview(homePreviewContainer);
+  });
+});
+
+// Get the "Learn More" button in the about section
+let learnMoreButtonsAbout = document.querySelectorAll('.about .btn');
+
+// Get the preview container for the about section
+let aboutPreviewContainer = document.querySelector('.about-preview');
+
+// Add click event listener to the "Learn More" buttons in the about section
+learnMoreButtonsAbout.forEach(button => {
+  button.addEventListener('click', function() {
+      let target = button.closest('.about').getAttribute('data-target');
+      openPreview(aboutPreviewContainer, target);
+  });
+});
+
+// Add click event listener to close button in the about section preview
+let closeButtonsAbout = aboutPreviewContainer.querySelectorAll('.fa-times');
+closeButtonsAbout.forEach(button => {
+  button.addEventListener('click', function() {
+      closePreview(aboutPreviewContainer);
+  });
 });

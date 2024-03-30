@@ -21,6 +21,7 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth
 }
 
 .btn {
@@ -173,6 +174,52 @@ header .fa-bars {
     width: 70rem;
 }
 
+.Bg-Preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.fa-times {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    color: #444;
+    font-size: 3.5rem;
+}
+
+.fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.Bg-Preview .preview h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-preview .HomePreview p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
 .two-sections {
     background: #F4F4F2;
 }
@@ -200,63 +247,24 @@ header .fa-bars {
     padding: 2rem;
 }
 
-.bg-preview {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.bg-preview .preview {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
-}
-
-.bg-preview .preview .fa-times {
-    position: relative;
-    float: right;
-    cursor: pointer;
-    color: #444;
-    font-size: 3.5rem;
-}
-
-.bg-preview .preview .fa-times:hover {
-    transform: rotate(90deg);
-}
-
-.bg-preview .preview h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.bg-preview .preview p {
+.about-preview .AboutPreview p {
     font-size: 18px;
     color: #333;
 }
 
-.bg-preview .preview .info {
+.about-preview .AboutPreview .info {
     line-height: 1.6;
 }
 
-.bg-preview .preview ul {
+.about-preview .AboutPreview ul {
     margin: 0px 0px 20px 60px;
 }
 
-.bg-preview .preview ul li p  {
+.about-preview .AboutPreview ul li p {
     margin-bottom: 12px;
 }
 
-.bg-preview .preview ul li::marker {
+.about-preview .AboutPreview ul li::marker {
     color: #333;
 }
 
@@ -312,6 +320,92 @@ header .fa-bars {
 
 .water-pollution {
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.water-pollution .flowchart ul {
+    position: relative;
+    padding-top: 20px;
+}
+
+.water-pollution .flowchart li {
+    position: relative;
+    padding: 20px 3px 0 3px;
+
+
+    display: inline-block;
+    vertical-align: top;
+
+    text-align: center;
+    list-style-type: none;
+}
+
+.water-pollution .flowchart ul li ul .hanger {
+    width: 30%;
+}
+
+.water-pollution .flowchart li::before,
+.water-pollution .flowchart li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 1.5px solid var(--green);
+}
+
+.water-pollution .flowchart li::after {
+    left: 50%;
+    right: auto;
+
+    border-left: 1.5px solid var(--green);
+}
+
+.water-pollution .flowchart li:only-child::after,
+.water-pollution .flowchart li:only-child::before {
+    content: '';
+    display: none;
+}
+
+.water-pollution .flowchart li:only-child {
+    padding-top: 0;
+}
+
+.water-pollution .flowchart li:first-child::before,
+.water-pollution .flowchart li:last-child::after {
+    border: 0 none;
+}
+
+.water-pollution .flowchart li:last-child::before {
+    border-right: 1.5px solid var(--green);
+    border-radius: 0 5px 0 0;
+}
+
+.water-pollution .flowchart li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.water-pollution .flowchart ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1.5px solid var(--green);
+    width: 0;
+    height: 20px;
+}
+
+.water-pollution .flowchart li p {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    border: 1.5px solid var(--green);
+
+    color: var(--green);
+    font-size: 18px;
 }
 
 .water-pollution .row {
@@ -400,16 +494,16 @@ header .fa-bars {
     right: 10px;
 }
 
-.project {
+.methods-techs {
     background: #F4F4F2;
     min-height: 100vh;
 }
 
-.project .heading {
+.methods-techs .heading {
     color: #555;
 }
 
-.project .box-container {
+.methods-techs .box-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -419,7 +513,7 @@ header .fa-bars {
     margin: 0 auto;
 }
 
-.project .box-container .box {
+.methods-techs .box-container .box {
     flex: 1 1 30rem;
     height: 22rem;
     box-shadow: 0 0.3rem 0.5rem #000;
@@ -429,13 +523,13 @@ header .fa-bars {
     cursor: pointer;
 }
 
-.project .box-container .box img {
+.methods-techs .box-container .box img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.project .box-container .box .icons {
+.methods-techs .box-container .box .icons {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -448,12 +542,12 @@ header .fa-bars {
     transform: scale(0);
 }
 
-.project .box-container .box:hover .icons {
+.methods-techs .box-container .box:hover .icons {
     top: 0;
     transform: scale(1);
 }
 
-.project .box-container .box .icons a {
+.methods-techs .box-container .box .icons a {
     font-size: 3rem;
     color: #fff;
     margin: 3rem 0;
@@ -462,7 +556,7 @@ header .fa-bars {
     transition-delay: calc(0.2s * var(--i));
 }
 
-.project .box-container .box:hover .icons a {
+.methods-techs .box-container .box:hover .icons a {
     transform: translateY(0rem);
 }
 
