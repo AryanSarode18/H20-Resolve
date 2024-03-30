@@ -25,6 +25,7 @@ html {
 }
 
 .btn {
+    display: inline-block;
     height: 3.5rem;
     width: 15rem;
     background: none;
@@ -210,13 +211,6 @@ header .fa-bars {
 .Bg-Preview .preview h3 {
     font-size: 24px;
     color: #333;
-    margin-bottom: 20px;
-}
-
-.home-preview .HomePreview p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
     margin-bottom: 20px;
 }
 
@@ -529,7 +523,7 @@ header .fa-bars {
     object-fit: cover;
 }
 
-.methods-techs .box-container .box .icons {
+.methods-techs .box-container .box .effect {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -542,22 +536,43 @@ header .fa-bars {
     transform: scale(0);
 }
 
-.methods-techs .box-container .box:hover .icons {
+.methods-techs .box-container .box:hover .effect {
     top: 0;
     transform: scale(1);
 }
 
-.methods-techs .box-container .box .icons a {
-    font-size: 3rem;
-    color: #fff;
-    margin: 3rem 0;
-    text-shadow: 0 0.3rem 0.5rem #000;
-    transform: translateY(13rem);
-    transition-delay: calc(0.2s * var(--i));
+.methods-techs .box-container .box {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+    cursor: pointer;
 }
 
-.methods-techs .box-container .box:hover .icons a {
-    transform: translateY(0rem);
+.methods-techs .box-container .box .blur-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.methods-techs .box-container .box:hover .blur-effect {
+    opacity: 1;
+}
+
+.methods-techs .box-container .box .blur-effect .image__description {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    font-size: 2.8rem;
 }
 
 .drought {
@@ -567,8 +582,31 @@ header .fa-bars {
     padding-bottom: 2rem;
 }
 
+.drought .inner-bg {
+    display: flex;
+}
+
 .drought .heading {
     color: #fff;
+}
+
+.drought .inner-bg .meaning .sub-heading,
+.drought .inner-bg .prevention .sub-heading {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.drought .inner-bg .meaning,
+.drought .inner-bg .prevention {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 43%;
+    margin: 0px auto;
+}
+
+.drought .inner-bg ul {
+    padding: 10px 0 0 60px;
 }
 
 .drought .video-container video {
@@ -582,14 +620,13 @@ header .fa-bars {
 }
 
 .drought .inner-bg {
-    width: 86%;
+    width: 83%;
     height: 70vh;
     margin: 2rem auto;
     padding: 2rem;
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(1rem);
     box-shadow: 0 .3rem .5rem #000;
-    text-align: center;
     border-top: .1rem solid rgba(255, 255, 255, .3);
     border-left: .1rem solid rgba(255, 255, 255, .3);
 }
@@ -607,15 +644,33 @@ header .fa-bars {
     margin: 0 auto;
 }
 
+.footer .box-container .box .content {
+    display: flex;
+}
+
 .footer .box-container .box {
     margin: 2rem;
     flex: 1 1 25rem;
+}
+
+.footer .box-container img {
+    width: 140px;
+    height: 125px;
+}
+
+.footer .box-container .section-heading {
+    color: var(--green);
+    font-size: 2.7rem;
 }
 
 .footer .box-container .box p {
     font-size: 1.7rem;
     color: #ccc;
     padding: 1rem 0;
+}
+
+.footer .box-container .box p a {
+    color: #fff;
 }
 
 .footer .credit {

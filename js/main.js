@@ -64,13 +64,14 @@ function changeText() {
   setInterval(function () {
     sloganElement.textContent = texts[currentIndex];
     currentIndex = (currentIndex + 1) % texts.length;
-  }, 4000);
+  }, 2500);
 }
 changeText();
 
 
 
-// Function to open the preview
+// JS Logic For Preview By Button In About Section
+
 function openPreview(previewContainer, target) {
   previewContainer.style.display = 'flex';
   let previewBoxes = previewContainer.querySelectorAll('.preview');
@@ -81,8 +82,6 @@ function openPreview(previewContainer, target) {
       }
   });
 }
-
-// Function to close the preview
 function closePreview(previewContainer) {
   let previewBoxes = previewContainer.querySelectorAll('.preview');
   previewBoxes.forEach(preview => {
@@ -90,42 +89,14 @@ function closePreview(previewContainer) {
   });
   previewContainer.style.display = 'none';
 }
-
-// Get the "Explore" button in the home section
-let exploreButtonHome = document.querySelector('.home .btn');
-
-// Get the preview container for the home section
-let homePreviewContainer = document.querySelector('.home-preview');
-
-// Add click event listener to the "Explore" button in the home section
-exploreButtonHome.addEventListener('click', function() {
-  let target = document.querySelector('.home').getAttribute('data-target');
-  openPreview(homePreviewContainer, target);
-});
-
-// Add click event listener to close button in the home section preview
-let closeButtonsHome = homePreviewContainer.querySelectorAll('.fa-times');
-closeButtonsHome.forEach(button => {
-  button.addEventListener('click', function() {
-      closePreview(homePreviewContainer);
-  });
-});
-
-// Get the "Learn More" button in the about section
 let learnMoreButtonsAbout = document.querySelectorAll('.about .btn');
-
-// Get the preview container for the about section
 let aboutPreviewContainer = document.querySelector('.about-preview');
-
-// Add click event listener to the "Learn More" buttons in the about section
 learnMoreButtonsAbout.forEach(button => {
   button.addEventListener('click', function() {
       let target = button.closest('.about').getAttribute('data-target');
       openPreview(aboutPreviewContainer, target);
   });
 });
-
-// Add click event listener to close button in the about section preview
 let closeButtonsAbout = aboutPreviewContainer.querySelectorAll('.fa-times');
 closeButtonsAbout.forEach(button => {
   button.addEventListener('click', function() {
