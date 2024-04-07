@@ -52,10 +52,9 @@ window.addEventListener("scroll", () => {
 
 const texts = [
   "Save Water, Save Life",
-  "Clean Water, Live Healthy",
-  "Save Blue, Live Green",
   "Think Before You Let It Drip",
   "Every Drop Counts",
+  "Save Blue, Live Green"
 ];
 function changeText() {
   const sloganElement = document.getElementById("slogan");
