@@ -288,7 +288,7 @@ header .fa-bars {
     text-align: center;
     border: 0.2rem solid var(--green);
     flex: 1 1 20rem;
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 .wastage .box-container .box i {
@@ -336,7 +336,7 @@ header .fa-bars {
 }
 
 .water-pollution .flowchart ul li ul .hanger {
-    width: 30%;
+    width: 40%;
 }
 
 .water-pollution .flowchart li::before,
@@ -432,7 +432,7 @@ header .fa-bars {
     background: #fff;
     border: 0.2rem solid var(--green);
     padding: 2rem;
-    margin: 2rem;
+    margin: 1.3rem;
 }
 
 .water-pollution .row .content .slides-container {
@@ -621,7 +621,6 @@ header .fa-bars {
 
 .drought .inner-bg {
     width: 83%;
-    height: 70vh;
     margin: 2rem auto;
     padding: 2rem;
     background: rgba(255, 255, 255, .1);
@@ -639,7 +638,6 @@ header .fa-bars {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     width: 95%;
     margin: 0 auto;
 }
@@ -650,7 +648,6 @@ header .fa-bars {
 
 .footer .box-container .box {
     margin: 2rem;
-    flex: 1 1 25rem;
 }
 
 .footer .box-container img {
@@ -687,11 +684,7 @@ header .fa-bars {
     color: var(--green);
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 55%;
-    }
-
+@media (max-width: 1010px) {
     header .fa-bars {
         display: block;
     }
@@ -731,6 +724,70 @@ header .fa-bars {
         opacity: 1;
     }
 
+    .water-pollution .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .water-pollution .row .box {
+        width: auto;
+    }
+
+    .water-pollution .row .image {
+        height: 86vh;
+    }
+}
+
+@media (max-width: 1390px) {
+    .water-pollution .row .content .slides-container .slide p {
+        font-size: 83%;
+    }
+
+    .water-pollution .row .content {
+        height: 49vh;
+    }
+
+    .drought .inner-bg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .drought .inner-bg .meaning,
+    .drought .inner-bg .prevention {
+        width: auto;
+    }
+
+    .drought .inner-bg p ,
+    .drought .inner-bg ul {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1296px) {
+    .wastage .box-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wastage .box-container .problem {
+        min-width: 50%;
+    }
+
+    .wastage .box-container .problem .question {
+        flex: none;
+    }
+
+    .wastage .box-container .problem .solution {
+        margin-top: 0;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
     .home .content h1 {
         font-size: 5rem;
     }
@@ -741,5 +798,50 @@ header .fa-bars {
 
     .service .box-container {
         width: auto;
+    }
+
+    .wastage .box-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wastage .box-container .problem {
+        width: auto !important;
+        margin: 2rem;
+        margin: .5rem 2rem !important;
+    }
+
+    .wastage .box-container .problem .box {
+        flex: none;
+        margin: 1rem;
+    }
+
+    .wastage .box-container .problem .solution {
+        min-height: auto;
+    }
+
+    .water-pollution .row .content {
+        height: 40vh;
+    }
+
+    .water-pollution .row .image {
+        width: auto;
+        height: auto;
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+    }
+
+    .footer .box-container .section-heading {
+        text-align: center;
+    }
+
+    .footer .box-container .abt-website {
+            text-align: center;
+    }
+
+    .footer .box-container .abt-website p {
+        width: 60vw;
     }
 }
